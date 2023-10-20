@@ -1,0 +1,76 @@
+<br>
+<center>
+
+	<p>Exam Score</p></center>
+
+
+
+<center><p>MARKSHEET</p></center>
+<br>
+
+<h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: {{name}}</h3>
+<h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Roll No: {{rollno}}</h3>
+
+<center>
+
+	<table border="3" cellpadding="13" align="center">
+		
+		<tr>
+			<th>Sr no.</th>
+			<th>Subject Name</th>
+			<th>Max Marks</th>
+			<th>Marks Obtained</th>
+			<th>Grade</th>
+			<th>Remark</th>
+		</tr>
+
+		<tr>
+			{% for data in physics %}
+			<td>{{ data }}</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for data in chemistry %}
+			<td>{{ data }}</td>
+			{% endfor %}
+		</tr>
+		<tr >
+			{% for data in maths %}
+			<td>{{ data }}</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for data in english %}
+			<td>{{ data }}</td>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for data in computer %}
+			<td>{{ data }}</td>
+			{% endfor %}
+		</tr>
+
+	</table>
+
+	<br>
+	<h3>RESULT :&nbsp;&nbsp;
+	{{ result }}
+	{% for sup in supple %}
+	{{sup}}
+	{% endfor %}</h3>
+
+</center>
