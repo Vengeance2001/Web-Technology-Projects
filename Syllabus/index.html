@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="st.css" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li id="tab1" class="rectangle active">SMD</li>
+            <li id="tab2" class="rectangle">CN</li>
+            <li id="tab3" class="rectangle">DAA</li>
+        </ul>
+    </nav>
+
+    <div class="container mt-4">
+        <div id="content">
+            <h2>SMD Syallabus</h2>
+            <p>
+                Unit-I Software Engineering Paradigms: 05 Hours
+                Process Models: Code-and-Fix Model, Waterfall Model, Rapid Application Development Model,
+                Incremental Model, Evolutionary Model and Others.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#tab1").click(function () {
+                $("#content").html(`<h2>SMD Syallabus</h2>
+            <p><h3>Unit-I Software Engineering Paradigms:</h3>Process Models: Code-and-Fix Model, Waterfall Model, Rapid Application Development Model, Incremental Model, Evolutionary Model and Others</p>`);
+                $("#tab1").addClass("active");
+                $("#tab2").removeClass("active");
+                $("#tab3").removeClass("active");
+            });
+
+            $("#tab2").click(function () {
+                $("#content").html(`<h2>CN Syallabus</h2>
+                <p><h3>Unit-I Data Communication, N/w Fundamentals and Phy Layer</h3>1) Examples and analysis of Encoding Methods: Unipolar NRZ, Polar NRZ, NRZ Inverted, Bipolar Encoding, Manchester Encoding, Differential Manchester Encoding2) Line coding, Channel Encoding and modulations Techniques: used in IEEE 802.3 standard and its extensions, IEEE 802.11 standards and its extensions for 100 Mbps, 1 GbE, 1 Gbps, 2.5 Gbps, 5 Gbps, 10 Gbps, 25Gbps, 40 Gbps, 100 Gbps networks. Chanel Encodings in 3G, 4G and 5G Mobile Networks</p>`);
+                $("#tab1").removeClass("active");
+                $("#tab2").addClass("active");
+                $("#tab3").removeClass("active");
+            });
+
+            $("#tab3").click(function () {
+                $("#content").html(`<h2>DAA Syallabus</h2>
+                <p><h3>Unit-I Basic introduction and time and space complexity analysis</h3>Asymptotic notations (Big Oh, small oh, Big Omega, Theta notations). Best case, average case, and worst-case time and space complexity of algorithms. Overview of searching, sorting algorithms. Adversary lower bounds (for the comparison-based sorting algorithms). Using Recurrence relations and Mathematical Induction to get asymptotic bounds on time complexity. Master’s theorem and applications.</p>`);
+                $("#tab1").removeClass("active");
+                $("#tab2").removeClass("active");
+                $("#tab3").addClass("active");
+            });
+        });
+    </script>
+</body>
+
+</html>

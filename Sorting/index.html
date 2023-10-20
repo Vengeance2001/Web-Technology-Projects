@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" style="display: flex; justify-content: space-evenly;">
+        <div class="sub-container-1" style="margin-top: 100px;">
+            <input id="input" type="text" />
+            <button onclick="addNum()">Add</button>
+        </div>
+        <div class="sub-container-2">
+            <p>Unsorted Array:</p>
+            <select id="list" multiple style="width: 200px; height: 300px"></select>
+            <br />
+            <br />
+            <button onclick="sort()" style="background-color: rgb(5, 240, 248);">Sort</button>
+            <button onclick="sortAll()" style="background-color: rgb(5, 240, 248);">Sort All</button>
+        </div>
+        <div class="sub-container-3">
+            <p>Sorted Array:</p>
+            <select id="sortedList" multiple style="width: 200px; height: 300px"></select>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
