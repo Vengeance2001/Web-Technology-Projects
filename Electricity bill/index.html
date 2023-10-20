@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main">Electricity Bill Calculator</h1>
+        <form action="bill.php" method="post">
+            <div class="form-group">
+                <label>Enter Name</label>
+                <br>
+                <input type="text" name="name1" required>
+                <br>
+                <label for="units">Enter Units Consumed:</label>
+                <br>
+                <input type="number" class="form-control" id="units" name="units" min="0" step="1" required>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
